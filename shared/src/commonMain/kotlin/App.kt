@@ -68,7 +68,7 @@ fun App() {
               translationY = panY
             }
         ) {
-          tree.forEach {
+          treeGraph.forEach {
             TreeNode(
               person = it,
               onClick = { detailsPerson = it },
@@ -78,6 +78,7 @@ fun App() {
         }
       }
     }
+
     AnimatedVisibility(
       visible = detailsPerson != null,
       enter = slideInVertically { it },
@@ -180,7 +181,7 @@ fun TreeNode(
 }
 
 
-val tree = listOf(
+val treeGraph = listOf(
   TreePerson(
     name = "Tanner Harding",
     ahnentafelNum = 0b1
